@@ -1,5 +1,5 @@
 body {
-    background-image:url("background3.png");
+    background-image:url("background4.png");
     background-size:100%;
 }
 ul {
@@ -8,7 +8,7 @@ ul {
     width:8%;
     position:static;
     position:fixed;
-   margin-top:-0.35%;
+    margin-top:-0.35%;
 }
 li a {
     display: block;
