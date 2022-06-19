@@ -1,0 +1,33 @@
+body {
+    background-image:url("background3.png");
+    background-size:100%;
+}
+ul {
+    list-style-type: none;
+    padding:0;
+    width:8%;
+    position:static;
+}
+li a {
+    display: block;
+    border-style: groove;
+    border-color: grey;
+    border-width: 5px;
+    padding:10% 1% 10% ;
+    text-align: center;
+    color:#f51111;
+    text-decoration: none;
+}
+li a:hover{
+    color:rgb(19, 54, 230);
+}
+h1{
+    padding-left: 10%;
+    padding-top: 0;
+    font-family: Verdana, sans-serif;
+}
+p{
+    padding-left: 10%;
+    padding-top: 0;
+    font-family: Verdana, sans-serif;
+}
