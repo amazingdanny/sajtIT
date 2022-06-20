@@ -33,3 +33,9 @@ p{
     padding-top: 0;
     font-family: Verdana, sans-serif;
 }
+hr{
+    width:80%;
+    text-align:right;
+    height: 4px;
+    background-color:black;
+}
