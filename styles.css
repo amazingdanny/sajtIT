@@ -1,19 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 #logo {
-    padding-bottom:10%;
+    padding:0;
     margin-bottom:0;
-    position:fixed;
     margin-left:25%;
     margin-top:-11%;
 }
 body {
     background-image:url("background2.png");
-    background-size:100%;
+    background-attachment: fixed;
+    background-size:cover;
 }
 ul {
+    position: fixed;
     list-style-type: none;
     padding:0;
     width:8%;
-    position:sticky;
+    top:0;
 }
 li a {
     display: block;
@@ -29,9 +31,10 @@ li a:hover{
     color:rgb(19, 54, 230);
 }
 .products {
+    position:relative;
+    margin-top:-10%;
     height: 100%;
     width: 75%;
-    margin-top: 5%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(3, 3fr);
@@ -50,48 +53,56 @@ li a:hover{
 .products .item .item-container {
     width: 250px;
     height: 90%;
-    background-color: #000;
   
     border-radius: 25px;
   
     position: relative;
   }
-.products .item .item-container .item-img {
+.products > .item > .item-container > .item-img > img {
     width: 100%;
-    height: 60%;
+    height: 100%;
   
     background-color: white;
   
     border: 1px solid #000;
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0px 0px;
   
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.products .item .item-container .desc {
-    width: 100%;
+.products > .item > .item-container > .description 
+{
     color: #fff;
-  
-    padding: 10px;
-}
-.products .item .item-container .add-to-cart img {
-    width: 100px;
-    height: 32px;
-    background-color: purple;
-  }
-  .products .item .item-container .add-to-wishlist img {
-    width: 100px;
-    height: 32px;
-    background-color: red;
-    padding: 5px;
-  }
-    
-    .products-list > .products > .item >.add-to-wishlist > img
+    width: 10%;
+    padding: 0px;
+}   
+    .products-list > .products  > .item > .item-container>.add-to-wishlist > img
   {
-    background-color: red;
+    width: 20%;
+    position: relative;
+    top:0;
+    right: 0;
   }
-    .products-list > .products > .item >.add-to-cart > img
+    .products-list > .products > .item > .item-container>.add-to-cart > img
   {
-     aaa 
+    color:#fff ;
+     width:20%;
+     position:relative;
+     right: 0;
+     left: 0;
   }
+  .products-list > .products  > .item >.item-container
+   {
+    border: 1px solid #000;
+    width:30%;
+    height:100%;
+    background-color: #000;
+    margin-bottom: 5%;
+   }
+   .products-list > .products  > .item >.item-container>.description>h2 {
+    margin: 0;
+   }
+   .products-list > .products  > .item >.item-container>.description>p{
+    margin: 0;
+   }

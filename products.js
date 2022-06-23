@@ -6,7 +6,7 @@ const products = [
         price: 9.99,
         instock: 5,
         description:"a",
-        imgSrc: "./img/"
+        imgSrc: "./images/1.png"
     },
     {
         id: 1,
@@ -14,7 +14,7 @@ const products = [
         price: 9.99,
         instock: 5,
         description:"a",
-        imgSrc: "./img/"
+        imgSrc: "./images/2.png"
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const products = [
         price: 9.99,
         instock: 5,
         description:"a",
-        imgSrc: "./img/"
+        imgSrc: "./images/3.png"
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const products = [
         price: 9.99,
         instock: 5,
         description:"a",
-        imgSrc: "./img/"
+        imgSrc: "./images/4.png"
     },
 
  ]
