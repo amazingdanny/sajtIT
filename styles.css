@@ -28,3 +28,70 @@ li a {
 li a:hover{
     color:rgb(19, 54, 230);
 }
+.products {
+    height: 100%;
+    width: 75%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 3fr);
+  }
+.products img {
+    width: 100%;
+}
+.products .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.products .item .item-container {
+    width: 250px;
+    height: 90%;
+    background-color: #000;
+  
+    border-radius: 25px;
+  
+    position: relative;
+  }
+.products .item .item-container .item-img {
+    width: 100%;
+    height: 60%;
+  
+    background-color: white;
+  
+    border: 1px solid #000;
+    border-radius: 25px 25px 0 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .item .item-container .desc {
+    width: 100%;
+    color: #fff;
+  
+    padding: 10px;
+}
+.products .item .item-container .add-to-cart img {
+    width: 100px;
+    height: 32px;
+    background-color: purple;
+  }
+  .products .item .item-container .add-to-wishlist img {
+    width: 100px;
+    height: 32px;
+    background-color: red;
+    padding: 5px;
+  }
+    
+    .products-list > .products > .item >.add-to-wishlist > img
+  {
+    background-color: red;
+  }
+    .products-list > .products > .item >.add-to-cart > img
+  {
+     aaa 
+  }
