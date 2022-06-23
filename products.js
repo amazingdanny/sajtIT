@@ -18,7 +18,7 @@ const products = [
     },
     {
         id: 2,
-        name:"Crocs Women's Kadee Ii Floral Flip Flop",
+        name:"Floral Flip-Flops",
         price: 22.99,
         instock: 20,
         description:"These flip-flops are made for women. They are designed to be comfortable for women everywhere.With this simple design, these flip-flops are made to make you feel comfortable.",
@@ -26,10 +26,10 @@ const products = [
     },
     {
         id: 3,
-        name:"Colourblock Thong-Strap Flip-Flops",
+        name:"Women Flip-Flops",
         price: 14.99,
         instock: 7,
-        description:"The color and the enjoyment these flip-flops will make your mood for days. This product will make you sure that you spent your money correctly. You can feel like real man again.",
+        description:"Textured thong strap.Firm, comfortable footbed with printed logo.Synthetic outsole.",
         imgSrc: "./images/4.png",
     },
     {
@@ -45,8 +45,8 @@ const products = [
         name:"Red Flip-Flops",
         price: 17.99,
         instock: 17,
-        description:"omplete your Swimwear look with our gorgeous new matching Flip Flops. Featuring your favourite Pour Moi prints, you'll be the best dressed babe on the beach!",
-        imgSrc: "./images/9.png",
+        description:"Complete your Swimwear look with our gorgeous new matching Flip Flops. Featuring your favourite Pour Moi prints, you'll be the best dressed babe on the beach!",
+        imgSrc: "./images/6.png",
     },
     {
         id: 6,
@@ -58,10 +58,10 @@ const products = [
     },
     {
         id: 7,
-        name:"Havanians Slim Flip-Flops",
-        price: 49.99,
+        name:"Men Flip-Flops",
+        price: 54.99,
         instock: 3,
-        description:"The textured footbed offers excellent traction (no slipping and sliding found here) and the rubber construction, is pliable, molding to your foot over time for a unique, customized fit.",
+        description:"If you're planning some outdoor summer adventures, you'll want to set out without these. ",
         imgSrc: "./images/8.png",
     },
 ]
