@@ -1,5 +1,6 @@
 const productsEl = document.querySelector(".products");
 const cartItemsEl = document.querySelector(".cart-items");
+const subtotalEl = document.querySelector(".subtotal");
 function renderProducts(){
     products.forEach( (product) =>{
     productsEl.innerHTML += `
@@ -26,11 +27,12 @@ function renderProducts(){
 }
 renderProducts();
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("CART"));
+updateCart();
 
 function addToCart(id){
     if(cart.some((item) => item.id === id )){
-        alert("Product already in cart!")
+        changeNumberOfUnits("plus", id)
     }
     else {
         const item = products.find((product) => product.id === id)
@@ -39,32 +41,69 @@ function addToCart(id){
      
         cart.push({
             ...item,
-            numberOfUnites: 1,
+            numberOfUnits: 1,
         }); 
     }
     updateCart();
 }
 function updateCart(){
     renderCartItems();
-    // renderSubtotal();
+    renderSubtotal();
+
+    localStorage.setItem("CART", JSON.stringify(cart));
+}
+function renderSubtotal(){
+    let totalPrice = 0, totalItems = 0;
+    cart.forEach((item) => {
+        totalPrice += item.price * item.numberOfUnits;
+        totalItems += item.numberOfUnits;
+    });
+    subtotalEl.innerHTML = `Subtotal(${totalItems} items):$${totalPrice.toFixed(2)}`
 }
 function renderCartItems(){
-    cart.forEach(()=>{
+    cartItemsEl.innerHTML = "";
+    cart.forEach((item)=>{
         cartItemsEl.innerHTML += `
         <div class="cart-item">
             <div class="item-info">
-                <img src="${item.imgSrc}" alt"${item.name}">
+                <img src="${item.imgSrc}" alt"${item.name}" onclick="removeItemFromCart(${item.id})">
                 <h4>${item.name}</h4>
             </div>
             <div class="unit-price">
             <small>$</small>${item.price}
             </div>
             <div class="units">
-                <div class="btn minus">-</div>
-                <div class="number">${item.numberOfUnites}</div>
-                <div class="btn plus">+</div>
+                <div class="btn-minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+                <div class="number">${item.numberOfUnits}</div>
+                <div class="btn-plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
             </div>
         </div>
         `
     });
 }
+
+function changeNumberOfUnits(action, id) {
+    cart = cart.map((item) => {
+      let numberOfUnits = item.numberOfUnits;
+  
+      if (item.id === id) {
+        if (action === "minus" && numberOfUnits > 1) {
+          numberOfUnits--;
+        } else if (action === "plus" && numberOfUnits < item.instock) {
+          numberOfUnits++;
+        }
+      }
+  
+      return {
+        ...item,
+        numberOfUnits,
+      };
+    });
+  
+    updateCart();
+  }
+  function removeItemFromCart(id){
+    cart = cart.filter( (item) => item.id !== id);
+    updateCart();
+  }
+  

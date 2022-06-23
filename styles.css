@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
 #logo {
     padding:0;
     margin-bottom:0;
@@ -37,7 +37,7 @@ li a:hover{
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(4, 4fr);
   }
 .products img {
     width: 100%;
@@ -66,7 +66,7 @@ li a:hover{
 .products > .item > .item-container > .description 
 {
     color: #fff;
-    width: 10%;
+    width: 100%;
     padding: 0px;
 } 
 .products > .item >.item-container > .add-to-cart {
@@ -137,24 +137,6 @@ li a:hover{
     margin-bottom: 15px;
     margin-top: 0;
    }
-   .shopping-bag {
-    padding: 10px 5px;
-    margin-left:90%;
-  }
-  .shopping-bag > a {
-    display: flex;
-    align-items: center;
-  }
-  .shopping-bag > a > img {
-    width: 32px;
-    height: 32px;
-  }
-  .shopping-bag > .total-items-in-cart {
-    margin-left: 10px;
-    padding: 5px;
-    background-color: rgb(242, 255, 58);
-    border-radius: 5px;
-  }
   .cart {
     height: 100%;
     width: 25%;
@@ -183,12 +165,53 @@ li a:hover{
     align-items: center;
     justify-content: center;
   }
-  .cart-footer {
+  .cart-item > .item-info > img {
+    width: 15%;
+    margin-left: -67%;
+    padding: 5px;
+    border: 1px white;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .cart-item > .item-info > img:hover {
+    background-color: #f51111;
+  }
+  .cart-item > .unit-price{
+    margin-left: -50%;
+    position: relative;
+    right: 44%;
+  }
+  .cart-item > .units {
+    position: relative;
+    right: 14%;
+  }
+  .cart-item > .units > .btn-minus {
+    position:relative;
+    right: 8px;
+    background-color: yellow;
+    padding: 2px;
     width: 100%;
+    border: yellow 1px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .cart-item > .units > .btn-plus {
+    position: relative;
+    left: 8px;
+    background-color: yellow;
+    padding: 2px;
+    width: 100%;
+    border: yellow 1px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .cart-footer {
+    width: 11%;
     background-color: rgb(255, 21, 21);
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 303%;
+    left: 89%;
   
     border-left: 1px solid rgb(var(--right-side-bg-color));
   }
@@ -197,7 +220,6 @@ li a:hover{
     align-items: center;
     justify-content: center;
     padding: 15px 0;
-  
     font-size: 1.3rem;
   }
   .cart-footer > .subtotal {
